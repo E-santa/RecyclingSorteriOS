@@ -252,7 +252,7 @@ class CameraFeedManager: NSObject {
 
     /**Tries to get the default back camera.
      */
-    guard let camera  = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front) else {
+    guard let camera  = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
       return false
     }
 
