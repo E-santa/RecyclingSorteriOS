@@ -16,7 +16,6 @@
 		AAE79E9B2135268800E7AC1F /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E992135268800E7AC1F /* CameraFeedManager.swift */; };
 		AF2761742B8191F900ECD6DE /* mobilenetLite.tflite in Resources */ = {isa = PBXBuildFile; fileRef = AF2761732B8191F900ECD6DE /* mobilenetLite.tflite */; };
 		AF2761782B81B36C00ECD6DE /* metadataed.tflite in Resources */ = {isa = PBXBuildFile; fileRef = AF2761772B81B36C00ECD6DE /* metadataed.tflite */; };
-		AF6F45952B840D7800C344F2 /* quote_database.db in Resources */ = {isa = PBXBuildFile; fileRef = AF6F45942B840D7800C344F2 /* quote_database.db */; };
 		BF43FFC12846FEC000D8FB74 /* ImageClassificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF43FFC02846FEC000D8FB74 /* ImageClassificationHelper.swift */; };
 		D4FE4CAF6557525B86F96D09 /* Pods_ImageClassification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33A00637C3AB63597629358 /* Pods_ImageClassification.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +46,6 @@
 		AAE79E992135268800E7AC1F /* CameraFeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
 		AF2761732B8191F900ECD6DE /* mobilenetLite.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenetLite.tflite; sourceTree = "<group>"; };
 		AF2761772B81B36C00ECD6DE /* metadataed.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = metadataed.tflite; sourceTree = "<group>"; };
-		AF6F45942B840D7800C344F2 /* quote_database.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = quote_database.db; sourceTree = "<group>"; };
 		BF43FFC02846FEC000D8FB74 /* ImageClassificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationHelper.swift; sourceTree = "<group>"; };
 		C33A00637C3AB63597629358 /* Pods_ImageClassification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageClassification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8D77E378B50B5DFA9E93D4 /* Pods-ImageClassification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageClassification.release.xcconfig"; path = "Target Support Files/Pods-ImageClassification/Pods-ImageClassification.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 		AAE79E58213521DA00E7AC1F /* ImageClassification */ = {
 			isa = PBXGroup;
 			children = (
-				AF6F45932B840D5C00C344F2 /* Database */,
 				AAE79E972135268800E7AC1F /* Camera Feed */,
 				AAE79E932135236700E7AC1F /* ViewControllers */,
 				AA5FEB7A21355CCC00F9BD4B /* TFLite */,
@@ -141,14 +138,6 @@
 				AAE79E992135268800E7AC1F /* CameraFeedManager.swift */,
 			);
 			path = "Camera Feed";
-			sourceTree = "<group>";
-		};
-		AF6F45932B840D5C00C344F2 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				AF6F45942B840D7800C344F2 /* quote_database.db */,
-			);
-			path = Database;
 			sourceTree = "<group>";
 		};
 		D5622D594467847B3A2C4DC0 /* Frameworks */ = {
@@ -226,7 +215,6 @@
 				AAE79E64213521DB00E7AC1F /* LaunchScreen.storyboard in Resources */,
 				AF2761742B8191F900ECD6DE /* mobilenetLite.tflite in Resources */,
 				AF2761782B81B36C00ECD6DE /* metadataed.tflite in Resources */,
-				AF6F45952B840D7800C344F2 /* quote_database.db in Resources */,
 				AAE79E61213521DB00E7AC1F /* Assets.xcassets in Resources */,
 				AAE79E5F213521DA00E7AC1F /* Main.storyboard in Resources */,
 			);
