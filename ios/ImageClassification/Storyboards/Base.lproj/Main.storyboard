@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7aX-iP-Lxp">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="yBP-eL-iHP">
+            <objects>
+                <viewController id="7aX-iP-Lxp" customClass="ViewController" customModule="ImageClassification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pbw-Hb-35N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDd-uV-ojM" userLabel="topBar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tfl_logo" translatesAutoresizingMaskIntoConstraints="NO" id="G8c-DH-tst">
+                                        <rect key="frame" x="16" y="56" width="160" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="5IJ-w5-3I7"/>
+                                            <constraint firstAttribute="width" constant="160" id="PgE-Id-weI"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50341497319999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="G8c-DH-tst" firstAttribute="top" secondItem="XDd-uV-ojM" secondAttribute="top" constant="56" id="MYL-1w-BPm"/>
+                                    <constraint firstItem="G8c-DH-tst" firstAttribute="leading" secondItem="XDd-uV-ojM" secondAttribute="leading" constant="16" id="Ytb-p6-o4U"/>
+                                    <constraint firstAttribute="bottom" secondItem="G8c-DH-tst" secondAttribute="bottom" constant="20" id="zOk-72-jU2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-Kh-vPx" customClass="PreviewView" customModule="ImageClassification" customModuleProvider="target">
+                                <rect key="frame" x="38" y="108" width="299" height="613"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Unavailable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPJ-nc-1Tt">
+                                <rect key="frame" x="92" y="215" width="191" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSu-8G-cls" userLabel="shutterButton">
+                                <rect key="frame" x="38" y="729" width="299" height="41"/>
+                                <accessibility key="accessibilityConfiguration" label="shutterButton"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="CLICK ME!" buttonSize="medium"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2W-SO-uH1" userLabel="emotionLabel">
+                                <rect key="frame" x="38" y="778" width="299" height="0.0"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ijl-bc-mDl"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstItem="XDd-uV-ojM" firstAttribute="leading" secondItem="pbw-Hb-35N" secondAttribute="leading" id="4Fa-k5-BRU"/>
+                            <constraint firstItem="lZs-Kh-vPx" firstAttribute="top" secondItem="XDd-uV-ojM" secondAttribute="bottom" constant="8" id="BDl-lc-tWV"/>
+                            <constraint firstItem="mSu-8G-cls" firstAttribute="top" secondItem="lZs-Kh-vPx" secondAttribute="bottom" constant="8" id="C6F-A3-Ldy"/>
+                            <constraint firstItem="Ijl-bc-mDl" firstAttribute="trailing" secondItem="uPJ-nc-1Tt" secondAttribute="trailing" constant="92" id="Ed0-4z-ZRZ"/>
+                            <constraint firstItem="Ijl-bc-mDl" firstAttribute="trailing" secondItem="lZs-Kh-vPx" secondAttribute="trailing" constant="38" id="Ht2-D5-eGU"/>
+                            <constraint firstItem="XDd-uV-ojM" firstAttribute="top" secondItem="pbw-Hb-35N" secondAttribute="top" id="OzG-PC-6tT"/>
+                            <constraint firstItem="Ijl-bc-mDl" firstAttribute="trailing" secondItem="E2W-SO-uH1" secondAttribute="trailing" constant="38" id="QeN-hK-0Qh"/>
+                            <constraint firstItem="E2W-SO-uH1" firstAttribute="top" secondItem="mSu-8G-cls" secondAttribute="bottom" constant="8" id="Sgs-E7-xhT"/>
+                            <constraint firstItem="mSu-8G-cls" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" constant="38" id="W6C-dO-wyC"/>
+                            <constraint firstItem="Ijl-bc-mDl" firstAttribute="trailing" secondItem="mSu-8G-cls" secondAttribute="trailing" constant="38" id="ZEu-8a-lif"/>
+                            <constraint firstItem="uPJ-nc-1Tt" firstAttribute="top" secondItem="XDd-uV-ojM" secondAttribute="bottom" constant="115" id="dMF-7M-jVM"/>
+                            <constraint firstItem="E2W-SO-uH1" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" constant="38" id="k3i-ac-odK"/>
+                            <constraint firstItem="uPJ-nc-1Tt" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" constant="92" id="mZn-0t-WJn"/>
+                            <constraint firstItem="E2W-SO-uH1" firstAttribute="bottom" secondItem="Ijl-bc-mDl" secondAttribute="bottom" id="ovn-xu-sy5"/>
+                            <constraint firstItem="XDd-uV-ojM" firstAttribute="trailing" secondItem="pbw-Hb-35N" secondAttribute="trailing" id="pUd-fh-fWx"/>
+                            <constraint firstItem="lZs-Kh-vPx" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" constant="38" id="s6o-VJ-5kb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraUnavailableLabel" destination="uPJ-nc-1Tt" id="xlw-29-JPB"/>
+                        <outlet property="emotionLabel" destination="E2W-SO-uH1" id="v7w-3U-ghc"/>
+                        <outlet property="previewView" destination="lZs-Kh-vPx" id="4Ms-eq-S68"/>
+                        <outlet property="shutterButton" destination="mSu-8G-cls" id="yzU-Bw-ENp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUu-fJ-Imh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194.40000000000001" y="618.4729064039409"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tfl_logo" width="266.66665649414062" height="42.666667938232422"/>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
