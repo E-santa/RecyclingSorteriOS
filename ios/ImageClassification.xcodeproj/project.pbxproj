@@ -17,6 +17,7 @@
 		AF3F74DD2C22205100E620AA /* tflite-quantizer.py in Resources */ = {isa = PBXBuildFile; fileRef = AF3F74DC2C22205100E620AA /* tflite-quantizer.py */; };
 		AF3F74DF2C2220BA00E620AA /* best-model.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF3F74DE2C2220BA00E620AA /* best-model.txt */; };
 		AF3F74E12C22222500E620AA /* metadataed.tflite in Resources */ = {isa = PBXBuildFile; fileRef = AF3F74E02C22222500E620AA /* metadataed.tflite */; };
+		AFE08FB42C6D375B0036BDB5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFE08FB32C6D375B0036BDB5 /* Settings.bundle */; };
 		BF43FFC12846FEC000D8FB74 /* ImageClassificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF43FFC02846FEC000D8FB74 /* ImageClassificationHelper.swift */; };
 		D4FE4CAF6557525B86F96D09 /* Pods_ImageClassification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33A00637C3AB63597629358 /* Pods_ImageClassification.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		AF3F74DC2C22205100E620AA /* tflite-quantizer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "tflite-quantizer.py"; sourceTree = "<group>"; };
 		AF3F74DE2C2220BA00E620AA /* best-model.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "best-model.txt"; sourceTree = "<group>"; };
 		AF3F74E02C22222500E620AA /* metadataed.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = metadataed.tflite; sourceTree = "<group>"; };
+		AFE08FB32C6D375B0036BDB5 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BF43FFC02846FEC000D8FB74 /* ImageClassificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationHelper.swift; sourceTree = "<group>"; };
 		C33A00637C3AB63597629358 /* Pods_ImageClassification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageClassification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8D77E378B50B5DFA9E93D4 /* Pods-ImageClassification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageClassification.release.xcconfig"; path = "Target Support Files/Pods-ImageClassification/Pods-ImageClassification.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				AAE79E59213521DA00E7AC1F /* AppDelegate.swift */,
 				AAE79E60213521DB00E7AC1F /* Assets.xcassets */,
 				AAE79E65213521DB00E7AC1F /* Info.plist */,
+				AFE08FB32C6D375B0036BDB5 /* Settings.bundle */,
 			);
 			path = ImageClassification;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				AAE79E61213521DB00E7AC1F /* Assets.xcassets in Resources */,
 				AF3F74DD2C22205100E620AA /* tflite-quantizer.py in Resources */,
 				AAE79E5F213521DA00E7AC1F /* Main.storyboard in Resources */,
+				AFE08FB42C6D375B0036BDB5 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,20 +452,20 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P9VDRUBW53;
+				DEVELOPMENT_TEAM = 553N3UYAV4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ImageClassification/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Cheer Up";
+				INFOPLIST_KEY_CFBundleDisplayName = "Recycling Sorter";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.esanta.cheerup;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esanta.recyclingsorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -479,20 +483,20 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P9VDRUBW53;
+				DEVELOPMENT_TEAM = 553N3UYAV4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ImageClassification/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Cheer Up";
+				INFOPLIST_KEY_CFBundleDisplayName = "Recycling Sorter";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.esanta.cheerup;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esanta.recyclingsorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";

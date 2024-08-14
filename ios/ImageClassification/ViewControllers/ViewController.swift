@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
   }
   private var scoreThreshold = DefaultConstants.scoreThreshold
-  private var model: ModelType = .mobilenetLite
+  private var model: ModelType = .sunnyvale
   private var detectedEmotion = ""
     private var pixelBuffer: CVPixelBuffer? = nil
     private var shouldRun = false
@@ -82,6 +82,11 @@ class ViewController: UIViewController {
 //        if (self.pixelBuffer == nil || self.isInferenceQueueBusy) {
 //            return
 //        }
+        if (UserDefaults().string(forKey: "jurisdiction") == "Sunnyvale") {
+            self.model = .sunnyvale
+        } else {
+            self.model = .santaclara
+        }
         self.shouldRun = true
     }
     
@@ -256,24 +261,29 @@ enum DefaultConstants {
   static let threadCount = 4
   static let maxResults = 3
   static let scoreThreshold: Float = 0.2
-  static let model: ModelType = .mobilenetLite
+  static let model: ModelType = .sunnyvale
 }
 
 /// TFLite model types
 enum ModelType: CaseIterable {
-  case mobilenetLite
+  case sunnyvale
+    case santaclara
 
   var modelFileInfo: FileInfo {
     switch self {
-    case .mobilenetLite:
+    case .sunnyvale:
       return FileInfo("metadataed", "tflite")
+        case .santaclara:
+            return FileInfo("metadataed", "tflite")
     }
   }
 
   var title: String {
     switch self {
-    case .mobilenetLite:
-      return "MobileNet-v3"
+    case .sunnyvale:
+      return "MobileNet-v2"
+        case .santaclara:
+            return "MobileNet-v2"
     }
   }
 }
