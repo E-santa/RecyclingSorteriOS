@@ -103,6 +103,7 @@ class ViewController: UIViewController {
     //bottomViewHeightConstraint.constant = inferenceVC.collapsedHeight + 290
     view.layoutSubviews()
       shutterButton.addTarget(self, action: #selector(inferenceModel(sender:)), for: UIControl.Event.touchUpInside)
+      UserDefaults().set(_: "Sunnyvale", forKey: "jurisdiction")
   }
     
 
@@ -191,6 +192,13 @@ extension ViewController: CameraFeedManagerDelegate {
         if #available(iOS 14.0, *) {
             let logger = Logger()
             logger.info("emotion: \(self.detectedEmotion)")
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 14.0, *) {
+            let logger = Logger()
+            let juris = UserDefaults().string(forKey: "jurisdiction")!
+            logger.info("\(juris)")
         } else {
             // Fallback on earlier versions
         }
