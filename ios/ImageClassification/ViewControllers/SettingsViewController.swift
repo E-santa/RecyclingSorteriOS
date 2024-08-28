@@ -12,18 +12,11 @@ import AVFAudio
 import AVFoundation
 
 class SettingsViewController: UIViewController {
-    @IBOutlet weak var filterPullDownButtom: UIButton!
 
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if #available(iOS 15.0, *) {
-            filterPullDownButtom.showsMenuAsPrimaryAction = true
-        } else {
-            // Fallback on earlier versions
-        }
-            
     }
     
     

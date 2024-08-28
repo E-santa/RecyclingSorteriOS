@@ -136,23 +136,17 @@
                                     <constraint firstItem="WR3-oy-uwz" firstAttribute="top" secondItem="Gbh-7F-mbi" secondAttribute="top" constant="56" id="qCa-pT-TjX"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGT-tQ-714">
-                                <rect key="frame" x="121" y="391" width="133" height="30"/>
-                                <state key="normal" title="Choose a City">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="setJurisdiction:" destination="Jgj-b7-BH3" eventType="valueChanged" id="9Hf-Mg-F0h"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your city:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbZ-2V-0HJ">
-                                <rect key="frame" x="121" y="337" width="133" height="21"/>
+                                <rect key="frame" x="121" y="177" width="133" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPQ-4T-2Ks" userLabel="city">
+                                <rect key="frame" x="0.0" y="228.33333333333334" width="375" height="291.66666666666663"/>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqK-DF-uzB" userLabel="backButton">
-                                <rect key="frame" x="38" y="728" width="299" height="41"/>
+                                <rect key="frame" x="38" y="724" width="299" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="shutterButton"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="BACK" buttonSize="medium"/>
@@ -164,27 +158,36 @@
                                     <action selector="backToHomeWithUnwindSegue:" destination="Jgj-b7-BH3" eventType="touchUpInside" id="U8J-Cf-xt4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="h8c-9e-amT" userLabel="confirmButton">
+                                <rect key="frame" x="38" y="583" width="299" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="shutterButton"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="CONFIRM CHANGES" buttonSize="medium"/>
+                                <connections>
+                                    <action selector="setJurisdiction:" destination="Jgj-b7-BH3" eventType="touchUpInside" id="uPE-Mm-tQT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="io0-ma-0gv"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
                             <constraint firstItem="io0-ma-0gv" firstAttribute="trailing" secondItem="WbZ-2V-0HJ" secondAttribute="trailing" constant="121" id="4d6-cM-7hv"/>
-                            <constraint firstItem="cGT-tQ-714" firstAttribute="top" secondItem="WbZ-2V-0HJ" secondAttribute="bottom" constant="33" id="68J-DY-0rH"/>
+                            <constraint firstItem="wPQ-4T-2Ks" firstAttribute="top" secondItem="WbZ-2V-0HJ" secondAttribute="bottom" constant="31" id="8iV-Hu-7Fe"/>
                             <constraint firstItem="Gbh-7F-mbi" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" id="DbC-NB-cjH"/>
-                            <constraint firstItem="io0-ma-0gv" firstAttribute="trailing" secondItem="cGT-tQ-714" secondAttribute="trailing" constant="121" id="J2l-eB-VL0"/>
                             <constraint firstItem="io0-ma-0gv" firstAttribute="trailing" secondItem="zqK-DF-uzB" secondAttribute="trailing" constant="38" id="Nfk-yr-qmy"/>
+                            <constraint firstItem="wPQ-4T-2Ks" firstAttribute="trailing" secondItem="io0-ma-0gv" secondAttribute="trailing" id="RVl-xc-gtS"/>
                             <constraint firstItem="WbZ-2V-0HJ" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" constant="121" id="TWX-Sv-ZU1"/>
-                            <constraint firstItem="cGT-tQ-714" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" constant="121" id="gw3-nF-wi7"/>
+                            <constraint firstItem="wPQ-4T-2Ks" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" id="agE-kz-6MO"/>
+                            <constraint firstItem="zqK-DF-uzB" firstAttribute="top" secondItem="h8c-9e-amT" secondAttribute="bottom" constant="100" id="d6o-73-8Q5"/>
+                            <constraint firstItem="WbZ-2V-0HJ" firstAttribute="top" secondItem="Gbh-7F-mbi" secondAttribute="bottom" constant="77" id="dmg-u1-BOz"/>
                             <constraint firstItem="Gbh-7F-mbi" firstAttribute="trailing" secondItem="io0-ma-0gv" secondAttribute="trailing" id="jDe-Ex-GYZ"/>
-                            <constraint firstItem="WbZ-2V-0HJ" firstAttribute="top" secondItem="Gbh-7F-mbi" secondAttribute="bottom" constant="237" id="lre-IU-t15"/>
+                            <constraint firstItem="h8c-9e-amT" firstAttribute="top" secondItem="wPQ-4T-2Ks" secondAttribute="bottom" constant="63" id="kvt-Hk-u85"/>
                             <constraint firstItem="io0-ma-0gv" firstAttribute="bottom" secondItem="zqK-DF-uzB" secondAttribute="bottom" constant="33" id="pb7-Sn-3Kt"/>
                             <constraint firstItem="Gbh-7F-mbi" firstAttribute="top" secondItem="gFi-Sc-LUb" secondAttribute="top" id="wOh-jT-6Zc"/>
                             <constraint firstItem="zqK-DF-uzB" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" constant="38" id="x8H-di-1cg"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="filterPullDownButtom" destination="cGT-tQ-714" id="ZUF-Xy-Tnt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JsV-Pb-cFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
