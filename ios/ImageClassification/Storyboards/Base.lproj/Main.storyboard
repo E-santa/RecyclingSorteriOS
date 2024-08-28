@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,10 +27,18 @@
                                             <constraint firstAttribute="width" constant="160" id="PgE-Id-weI"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-yr-PNu">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-yr-PNu" userLabel="settings">
                                         <rect key="frame" x="253" y="51" width="95" height="41"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Settings"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Settings">
+                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="toSettings:" destination="7aX-iP-Lxp" eventType="touchUpInside" id="kB2-gd-87i"/>
+                                            <segue destination="Jgj-b7-BH3" kind="popoverPresentation" identifier="toSettings" popoverAnchorView="dLu-yr-PNu" id="o58-oS-5g1">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50341497319999995" colorSpace="custom" customColorSpace="sRGB"/>
@@ -96,19 +103,19 @@
                         <outlet property="cameraUnavailableLabel" destination="uPJ-nc-1Tt" id="xlw-29-JPB"/>
                         <outlet property="emotionLabel" destination="E2W-SO-uH1" id="v7w-3U-ghc"/>
                         <outlet property="previewView" destination="lZs-Kh-vPx" id="4Ms-eq-S68"/>
-                        <outlet property="shutterButton" destination="mSu-8G-cls" id="yzU-Bw-ENp"/>
+                        <outlet property="shutterButton" destination="mSu-8G-cls" id="OeM-BD-DoT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUu-fJ-Imh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-194.40000000000001" y="618.4729064039409"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="yQB-VC-ekx">
             <objects>
-                <viewController id="Jgj-b7-BH3" sceneMemberID="viewController">
+                <viewController id="Jgj-b7-BH3" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gFi-Sc-LUb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbh-7F-mbi" userLabel="topBar">
@@ -129,30 +136,59 @@
                                     <constraint firstItem="WR3-oy-uwz" firstAttribute="top" secondItem="Gbh-7F-mbi" secondAttribute="top" constant="56" id="qCa-pT-TjX"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGT-tQ-714">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <menu key="menu" id="uCK-P7-sDa">
-                                    <children>
-                                        <command title="Sunnyvale" id="jBv-zY-tLE"/>
-                                        <command title="Santa Clara" id="9f2-QI-79m"/>
-                                    </children>
-                                </menu>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGT-tQ-714">
+                                <rect key="frame" x="121" y="391" width="133" height="30"/>
+                                <state key="normal" title="Choose a City">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="setJurisdiction:" destination="Jgj-b7-BH3" eventType="valueChanged" id="9Hf-Mg-F0h"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your city:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbZ-2V-0HJ">
+                                <rect key="frame" x="121" y="337" width="133" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqK-DF-uzB" userLabel="backButton">
+                                <rect key="frame" x="38" y="728" width="299" height="41"/>
+                                <accessibility key="accessibilityConfiguration" label="shutterButton"/>
                                 <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="BACK" buttonSize="medium"/>
+                                <connections>
+                                    <action selector="backToHome:" destination="Jgj-b7-BH3" eventType="touchUpInside" id="5pC-yT-oci"/>
+                                    <action selector="backToHome:" destination="Jgj-b7-BH3" eventType="touchDragEnter" id="JJf-nm-04a"/>
+                                    <action selector="backToHome:" destination="Jgj-b7-BH3" eventType="touchDown" id="eu7-8l-BwO"/>
+                                    <action selector="backToHome:" destination="Jgj-b7-BH3" eventType="touchUpOutside" id="lOy-Ql-cYb"/>
+                                    <action selector="backToHomeWithUnwindSegue:" destination="Jgj-b7-BH3" eventType="touchUpInside" id="U8J-Cf-xt4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="io0-ma-0gv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
+                            <constraint firstItem="io0-ma-0gv" firstAttribute="trailing" secondItem="WbZ-2V-0HJ" secondAttribute="trailing" constant="121" id="4d6-cM-7hv"/>
+                            <constraint firstItem="cGT-tQ-714" firstAttribute="top" secondItem="WbZ-2V-0HJ" secondAttribute="bottom" constant="33" id="68J-DY-0rH"/>
                             <constraint firstItem="Gbh-7F-mbi" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" id="DbC-NB-cjH"/>
+                            <constraint firstItem="io0-ma-0gv" firstAttribute="trailing" secondItem="cGT-tQ-714" secondAttribute="trailing" constant="121" id="J2l-eB-VL0"/>
+                            <constraint firstItem="io0-ma-0gv" firstAttribute="trailing" secondItem="zqK-DF-uzB" secondAttribute="trailing" constant="38" id="Nfk-yr-qmy"/>
+                            <constraint firstItem="WbZ-2V-0HJ" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" constant="121" id="TWX-Sv-ZU1"/>
+                            <constraint firstItem="cGT-tQ-714" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" constant="121" id="gw3-nF-wi7"/>
                             <constraint firstItem="Gbh-7F-mbi" firstAttribute="trailing" secondItem="io0-ma-0gv" secondAttribute="trailing" id="jDe-Ex-GYZ"/>
+                            <constraint firstItem="WbZ-2V-0HJ" firstAttribute="top" secondItem="Gbh-7F-mbi" secondAttribute="bottom" constant="237" id="lre-IU-t15"/>
+                            <constraint firstItem="io0-ma-0gv" firstAttribute="bottom" secondItem="zqK-DF-uzB" secondAttribute="bottom" constant="33" id="pb7-Sn-3Kt"/>
                             <constraint firstItem="Gbh-7F-mbi" firstAttribute="top" secondItem="gFi-Sc-LUb" secondAttribute="top" id="wOh-jT-6Zc"/>
+                            <constraint firstItem="zqK-DF-uzB" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" constant="38" id="x8H-di-1cg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="filterPullDownButtom" destination="cGT-tQ-714" id="ZUF-Xy-Tnt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JsV-Pb-cFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-487" y="-62"/>
+            <point key="canvasLocation" x="-487.19999999999999" y="-62.068965517241381"/>
         </scene>
     </scenes>
     <resources>

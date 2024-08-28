@@ -24,6 +24,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var cameraUnavailableLabel: UILabel!
   @IBOutlet weak var emotionLabel: UILabel!
   @IBOutlet weak var shutterButton: UIButton!
+    @IBOutlet weak var settings: UIButton!
 
   // MARK: Constants
   private let animationDuration = 0.5
@@ -70,7 +71,10 @@ class ViewController: UIViewController {
   // Handles the presenting of results on the screen
   //private var inferenceViewController: InferenceViewController?
 
-  // MARK: View Handling Methods
+    @IBAction func toSettings(_ sender: Any) {
+        performSegue(withIdentifier: "toSettings", sender: self)
+    }
+    // MARK: View Handling Methods
     @objc func inferenceModel(sender: UIButton!) {
         if #available(iOS 14.0, *) {
             let logger = Logger()
