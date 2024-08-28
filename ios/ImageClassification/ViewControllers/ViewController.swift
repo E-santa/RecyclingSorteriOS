@@ -103,7 +103,9 @@ class ViewController: UIViewController {
     //bottomViewHeightConstraint.constant = inferenceVC.collapsedHeight + 290
     view.layoutSubviews()
       shutterButton.addTarget(self, action: #selector(inferenceModel(sender:)), for: UIControl.Event.touchUpInside)
-      UserDefaults().set(_: "Sunnyvale", forKey: "jurisdiction")
+      if (UserDefaults().string(forKey: "jurisdiction") == nil) {
+          UserDefaults().set(_: "Sunnyvale", forKey: "jurisdiction")
+      }
   }
     
 

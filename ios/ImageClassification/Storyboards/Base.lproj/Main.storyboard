@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7aX-iP-Lxp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7aX-iP-Lxp">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,11 +28,20 @@
                                             <constraint firstAttribute="width" constant="160" id="PgE-Id-weI"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-yr-PNu">
+                                        <rect key="frame" x="253" y="51" width="95" height="41"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Settings"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50341497319999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="dLu-yr-PNu" firstAttribute="top" secondItem="XDd-uV-ojM" secondAttribute="top" constant="51" id="JE0-FB-A8P"/>
                                     <constraint firstItem="G8c-DH-tst" firstAttribute="top" secondItem="XDd-uV-ojM" secondAttribute="top" constant="56" id="MYL-1w-BPm"/>
+                                    <constraint firstAttribute="bottom" secondItem="dLu-yr-PNu" secondAttribute="bottom" constant="8" id="TFt-NJ-Njs"/>
                                     <constraint firstItem="G8c-DH-tst" firstAttribute="leading" secondItem="XDd-uV-ojM" secondAttribute="leading" constant="16" id="Ytb-p6-o4U"/>
+                                    <constraint firstItem="dLu-yr-PNu" firstAttribute="leading" secondItem="G8c-DH-tst" secondAttribute="trailing" constant="77" id="h1w-7U-wcZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="dLu-yr-PNu" secondAttribute="trailing" constant="27" id="ipx-GD-PRP"/>
                                     <constraint firstAttribute="bottom" secondItem="G8c-DH-tst" secondAttribute="bottom" constant="20" id="zOk-72-jU2"/>
                                 </constraints>
                             </view>
@@ -93,11 +103,65 @@
             </objects>
             <point key="canvasLocation" x="-194.40000000000001" y="618.4729064039409"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="yQB-VC-ekx">
+            <objects>
+                <viewController id="Jgj-b7-BH3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gFi-Sc-LUb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbh-7F-mbi" userLabel="topBar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tfl_logo" translatesAutoresizingMaskIntoConstraints="NO" id="WR3-oy-uwz">
+                                        <rect key="frame" x="16" y="56" width="160" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="L0Q-IW-PxE"/>
+                                            <constraint firstAttribute="width" constant="160" id="Rqn-hS-9S2"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50341497319999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WR3-oy-uwz" secondAttribute="bottom" constant="20" id="AU6-0I-b2a"/>
+                                    <constraint firstItem="WR3-oy-uwz" firstAttribute="leading" secondItem="Gbh-7F-mbi" secondAttribute="leading" constant="16" id="LWV-Jr-I1L"/>
+                                    <constraint firstItem="WR3-oy-uwz" firstAttribute="top" secondItem="Gbh-7F-mbi" secondAttribute="top" constant="56" id="qCa-pT-TjX"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGT-tQ-714">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <menu key="menu" id="uCK-P7-sDa">
+                                    <children>
+                                        <command title="Sunnyvale" id="jBv-zY-tLE"/>
+                                        <command title="Santa Clara" id="9f2-QI-79m"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="io0-ma-0gv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gbh-7F-mbi" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" id="DbC-NB-cjH"/>
+                            <constraint firstItem="Gbh-7F-mbi" firstAttribute="trailing" secondItem="io0-ma-0gv" secondAttribute="trailing" id="jDe-Ex-GYZ"/>
+                            <constraint firstItem="Gbh-7F-mbi" firstAttribute="top" secondItem="gFi-Sc-LUb" secondAttribute="top" id="wOh-jT-6Zc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JsV-Pb-cFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487" y="-62"/>
+        </scene>
     </scenes>
     <resources>
         <image name="tfl_logo" width="266.66665649414062" height="42.666667938232422"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
