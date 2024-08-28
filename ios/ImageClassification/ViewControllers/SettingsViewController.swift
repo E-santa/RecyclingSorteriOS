@@ -14,14 +14,18 @@ import AVFoundation
 class SettingsViewController: UIViewController {
 
     
-
+    @IBOutlet weak var jurisdictionPicker: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        jurisdictionPicker.dataSource = self
+        jurisdictionPicker.delegate = self
     }
     
     
     @IBAction func setJurisdiction(_ sender: UIButton) {
-        UserDefaults().set(_: "Sunnyvale", forKey: "jurisdiction")
+        let pickedValue = jurisdictionPicker.selectedRow(inComponent: 0)
+        UserDefaults().set(_: pickerView(jurisdictionPicker, titleForRow: pickedValue, forComponent: 0), forKey: "jurisdiction")
     }
     
     @IBAction func backToHome(unwindSegue: UIStoryboardSegue) {
@@ -37,4 +41,36 @@ class SettingsViewController: UIViewController {
     }
     */
 
+}
+
+extension SettingsViewController: UIPickerViewDelegate {
+    
+}
+
+extension SettingsViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch component {
+            case 0:
+                return 0
+            case 1:
+                return 1
+            default:
+                return 0
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            switch component {
+            case 0:
+                return "Sunnyvale"
+            case 1:
+                return "Santa Clara"
+            default:
+                return "Sunnyvale"
+            }
+        }
 }
