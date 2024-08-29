@@ -113,7 +113,7 @@
         <!--Settings View Controller-->
         <scene sceneID="yQB-VC-ekx">
             <objects>
-                <viewController id="Jgj-b7-BH3" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController id="Jgj-b7-BH3" customClass="SettingsViewController" customModule="ImageClassification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gFi-Sc-LUb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,30 +137,29 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your city:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbZ-2V-0HJ">
-                                <rect key="frame" x="121" y="177" width="133" height="20.333333333333343"/>
+                                <rect key="frame" x="121" y="119.99999999999999" width="133" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPQ-4T-2Ks" userLabel="jurisdictionPicker">
-                                <rect key="frame" x="0.0" y="228.33333333333334" width="375" height="291.66666666666663"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqK-DF-uzB" userLabel="backButton">
-                                <rect key="frame" x="38" y="724" width="299" height="45"/>
+                                <rect key="frame" x="38" y="455.33333333333331" width="299" height="40.333333333333314"/>
                                 <accessibility key="accessibilityConfiguration" label="shutterButton"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="BACK" buttonSize="medium"/>
                                 <connections>
-                                    <action selector="backToHome:" destination="Jgj-b7-BH3" eventType="touchUpInside" id="5pC-yT-oci"/>
-                                    <action selector="backToHome:" destination="Jgj-b7-BH3" eventType="touchDragEnter" id="JJf-nm-04a"/>
-                                    <action selector="backToHome:" destination="Jgj-b7-BH3" eventType="touchDown" id="eu7-8l-BwO"/>
-                                    <action selector="backToHome:" destination="Jgj-b7-BH3" eventType="touchUpOutside" id="lOy-Ql-cYb"/>
                                     <action selector="backToHomeWithUnwindSegue:" destination="Jgj-b7-BH3" eventType="touchUpInside" id="U8J-Cf-xt4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="h8c-9e-amT" userLabel="confirmButton">
-                                <rect key="frame" x="38" y="583" width="299" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbO-SN-IBI">
+                                <rect key="frame" x="0.0" y="158.33333333333337" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Jgj-b7-BH3" id="A83-9k-hqX"/>
+                                    <outlet property="delegate" destination="Jgj-b7-BH3" id="sA2-Zk-NXm"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8c-9e-amT" userLabel="confirmButton">
+                                <rect key="frame" x="38" y="382.33333333333331" width="299" height="41"/>
                                 <accessibility key="accessibilityConfiguration" label="shutterButton"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CONFIRM CHANGES" buttonSize="medium"/>
@@ -172,24 +171,25 @@
                         <viewLayoutGuide key="safeArea" id="io0-ma-0gv"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
+                            <constraint firstItem="io0-ma-0gv" firstAttribute="trailing" secondItem="h8c-9e-amT" secondAttribute="trailing" constant="38" id="0Vh-Tn-HP9"/>
+                            <constraint firstItem="h8c-9e-amT" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" constant="38" id="4Ts-8F-FCU"/>
                             <constraint firstItem="io0-ma-0gv" firstAttribute="trailing" secondItem="WbZ-2V-0HJ" secondAttribute="trailing" constant="121" id="4d6-cM-7hv"/>
-                            <constraint firstItem="wPQ-4T-2Ks" firstAttribute="top" secondItem="WbZ-2V-0HJ" secondAttribute="bottom" constant="31" id="8iV-Hu-7Fe"/>
+                            <constraint firstItem="h8c-9e-amT" firstAttribute="top" secondItem="BbO-SN-IBI" secondAttribute="bottom" constant="8" symbolic="YES" id="9cc-ow-9sy"/>
                             <constraint firstItem="Gbh-7F-mbi" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" id="DbC-NB-cjH"/>
                             <constraint firstItem="io0-ma-0gv" firstAttribute="trailing" secondItem="zqK-DF-uzB" secondAttribute="trailing" constant="38" id="Nfk-yr-qmy"/>
-                            <constraint firstItem="wPQ-4T-2Ks" firstAttribute="trailing" secondItem="io0-ma-0gv" secondAttribute="trailing" id="RVl-xc-gtS"/>
                             <constraint firstItem="WbZ-2V-0HJ" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" constant="121" id="TWX-Sv-ZU1"/>
-                            <constraint firstItem="wPQ-4T-2Ks" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" id="agE-kz-6MO"/>
-                            <constraint firstItem="zqK-DF-uzB" firstAttribute="top" secondItem="h8c-9e-amT" secondAttribute="bottom" constant="100" id="d6o-73-8Q5"/>
-                            <constraint firstItem="WbZ-2V-0HJ" firstAttribute="top" secondItem="Gbh-7F-mbi" secondAttribute="bottom" constant="77" id="dmg-u1-BOz"/>
+                            <constraint firstItem="BbO-SN-IBI" firstAttribute="trailing" secondItem="io0-ma-0gv" secondAttribute="trailing" id="Xdk-YI-1u9"/>
+                            <constraint firstItem="BbO-SN-IBI" firstAttribute="top" secondItem="WbZ-2V-0HJ" secondAttribute="bottom" constant="18" id="dLn-kg-V4x"/>
+                            <constraint firstItem="WbZ-2V-0HJ" firstAttribute="top" secondItem="Gbh-7F-mbi" secondAttribute="bottom" constant="20" id="dmg-u1-BOz"/>
+                            <constraint firstItem="zqK-DF-uzB" firstAttribute="top" secondItem="h8c-9e-amT" secondAttribute="bottom" constant="32" id="gsV-61-8J3"/>
                             <constraint firstItem="Gbh-7F-mbi" firstAttribute="trailing" secondItem="io0-ma-0gv" secondAttribute="trailing" id="jDe-Ex-GYZ"/>
-                            <constraint firstItem="h8c-9e-amT" firstAttribute="top" secondItem="wPQ-4T-2Ks" secondAttribute="bottom" constant="63" id="kvt-Hk-u85"/>
-                            <constraint firstItem="io0-ma-0gv" firstAttribute="bottom" secondItem="zqK-DF-uzB" secondAttribute="bottom" constant="33" id="pb7-Sn-3Kt"/>
+                            <constraint firstItem="BbO-SN-IBI" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" id="oN8-QD-gGZ"/>
                             <constraint firstItem="Gbh-7F-mbi" firstAttribute="top" secondItem="gFi-Sc-LUb" secondAttribute="top" id="wOh-jT-6Zc"/>
                             <constraint firstItem="zqK-DF-uzB" firstAttribute="leading" secondItem="io0-ma-0gv" secondAttribute="leading" constant="38" id="x8H-di-1cg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="jurisdictionPicker" destination="wPQ-4T-2Ks" id="fRD-l6-PH9"/>
+                        <outlet property="jurisdictionPicker" destination="BbO-SN-IBI" id="fRD-l6-PH9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JsV-Pb-cFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
