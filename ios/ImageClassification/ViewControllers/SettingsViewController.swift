@@ -16,21 +16,35 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var jurisdictionPicker: UIPickerView!
     
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var confirmButton: UIButton!
     
+    let jurisdictions = [
+        "Sunnyvale",
+        "Santa Clara"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         jurisdictionPicker.dataSource = self
         jurisdictionPicker.delegate = self
+        jurisdictionPicker.reloadAllComponents()
     }
     
     
     @IBAction func setJurisdiction(_ sender: UIButton) {
         let pickedValue = jurisdictionPicker.selectedRow(inComponent: 0)
-        UserDefaults().set(_: pickerView(jurisdictionPicker, titleForRow: pickedValue, forComponent: 0), forKey: "jurisdiction")
+        UserDefaults().set(_: jurisdictions[pickedValue], forKey: "jurisdiction")
+        if #available(iOS 14.0, *) {
+                var l = Logger()
+                l.log("Set Jurisdiction")
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
-    @IBAction func backToHome(unwindSegue: UIStoryboardSegue) {
+    @IBAction func backToHome(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToHome", sender: self)
     }
 
     /*
@@ -55,24 +69,10 @@ extension SettingsViewController: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch component {
-            case 0:
-                return 0
-            case 1:
-                return 1
-            default:
-                return 0
-        }
+        return jurisdictions.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            switch component {
-            case 0:
-                return "Sunnyvale"
-            case 1:
-                return "Santa Clara"
-            default:
-                return "Sunnyvale"
-            }
+            return jurisdictions[component]
         }
 }

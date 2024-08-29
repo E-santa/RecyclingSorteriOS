@@ -189,6 +189,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="zqK-DF-uzB" id="Xyq-Wr-ncF"/>
+                        <outlet property="confirmButton" destination="h8c-9e-amT" id="Wbc-ak-OBb"/>
                         <outlet property="jurisdictionPicker" destination="BbO-SN-IBI" id="fRD-l6-PH9"/>
                     </connections>
                 </viewController>
