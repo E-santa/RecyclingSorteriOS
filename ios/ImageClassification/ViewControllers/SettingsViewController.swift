@@ -42,10 +42,6 @@ class SettingsViewController: UIViewController {
             // Fallback on earlier versions
         }
     }
-    
-    @IBAction func backToHome(_ sender: Any) {
-        performSegue(withIdentifier: "unwindToHome", sender: self)
-    }
 
     /*
     // MARK: - Navigation

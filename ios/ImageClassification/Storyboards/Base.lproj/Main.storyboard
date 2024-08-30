@@ -148,7 +148,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="BACK" buttonSize="medium"/>
                                 <connections>
-                                    <action selector="backToHomeWithUnwindSegue:" destination="Jgj-b7-BH3" eventType="touchUpInside" id="U8J-Cf-xt4"/>
+                                    <segue destination="u9c-V0-xTR" kind="unwind" unwindAction="unwindToHome:" id="KLC-gu-Fd6"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbO-SN-IBI">
@@ -195,6 +195,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JsV-Pb-cFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="u9c-V0-xTR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-487.19999999999999" y="-62.068965517241381"/>
         </scene>
