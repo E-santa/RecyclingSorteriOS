@@ -69,6 +69,6 @@ extension SettingsViewController: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return jurisdictions[component]
+            return jurisdictions[row]
         }
 }
