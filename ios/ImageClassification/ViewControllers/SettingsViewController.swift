@@ -36,8 +36,8 @@ class SettingsViewController: UIViewController {
         let pickedValue = jurisdictionPicker.selectedRow(inComponent: 0)
         UserDefaults().set(_: jurisdictions[pickedValue], forKey: "jurisdiction")
         if #available(iOS 14.0, *) {
-                var l = Logger()
-                l.log("Set Jurisdiction")
+            let l = Logger()
+            l.log("Set Jurisdiction to \(self.jurisdictions[pickedValue])")
         } else {
             // Fallback on earlier versions
         }
