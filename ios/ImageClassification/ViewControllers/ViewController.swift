@@ -23,7 +23,8 @@ class ViewController: UIViewController {
   @IBOutlet weak var previewView: PreviewView!
   @IBOutlet weak var cameraUnavailableLabel: UILabel!
   @IBOutlet weak var emotionLabel: UILabel!
-  @IBOutlet weak var shutterButton: UIButton!
+    @IBOutlet weak var categoryImage: UIImageView!
+    @IBOutlet weak var shutterButton: UIButton!
     @IBOutlet weak var settings: UIButton!
 
   // MARK: Constants
@@ -224,6 +225,9 @@ extension ViewController: CameraFeedManagerDelegate {
                   let utterance = AVSpeechUtterance(string: self.detectedEmotion)
                   utterance.voice = self.voice
                   self.emotionLabel.text = self.detectedEmotion
+                  if (self.detectedEmotion != "No Results") {
+                      self.categoryImage.image = UIImage(named: "CategoryImages/\(self.detectedEmotion).png")
+                  }
                   synthesizer.speak(utterance)
               }
   }

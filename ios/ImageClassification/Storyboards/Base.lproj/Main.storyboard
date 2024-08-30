@@ -53,7 +53,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-Kh-vPx" customClass="PreviewView" customModule="ImageClassification" customModuleProvider="target">
-                                <rect key="frame" x="38" y="108" width="299" height="613"/>
+                                <rect key="frame" x="38" y="108" width="299" height="596"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Unavailable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPJ-nc-1Tt">
@@ -63,13 +63,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSu-8G-cls" userLabel="shutterButton">
-                                <rect key="frame" x="38" y="729" width="299" height="41"/>
+                                <rect key="frame" x="38" y="712" width="299" height="41"/>
                                 <accessibility key="accessibilityConfiguration" label="shutterButton"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CLICK ME!" buttonSize="medium"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2W-SO-uH1" userLabel="emotionLabel">
-                                <rect key="frame" x="38" y="778" width="299" height="0.0"/>
+                                <rect key="frame" x="38" y="761" width="299" height="0.0"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -77,6 +77,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="57I-c0-h0W">
+                                <rect key="frame" x="38" y="769" width="299" height="9"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ijl-bc-mDl"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
@@ -84,23 +87,28 @@
                             <constraint firstItem="XDd-uV-ojM" firstAttribute="leading" secondItem="pbw-Hb-35N" secondAttribute="leading" id="4Fa-k5-BRU"/>
                             <constraint firstItem="lZs-Kh-vPx" firstAttribute="top" secondItem="XDd-uV-ojM" secondAttribute="bottom" constant="8" id="BDl-lc-tWV"/>
                             <constraint firstItem="mSu-8G-cls" firstAttribute="top" secondItem="lZs-Kh-vPx" secondAttribute="bottom" constant="8" id="C6F-A3-Ldy"/>
+                            <constraint firstItem="57I-c0-h0W" firstAttribute="top" secondItem="E2W-SO-uH1" secondAttribute="bottom" constant="8" id="CwS-YA-GU5"/>
+                            <constraint firstItem="Ijl-bc-mDl" firstAttribute="bottom" secondItem="57I-c0-h0W" secondAttribute="bottom" id="Dns-vk-xjX"/>
                             <constraint firstItem="Ijl-bc-mDl" firstAttribute="trailing" secondItem="uPJ-nc-1Tt" secondAttribute="trailing" constant="92" id="Ed0-4z-ZRZ"/>
                             <constraint firstItem="Ijl-bc-mDl" firstAttribute="trailing" secondItem="lZs-Kh-vPx" secondAttribute="trailing" constant="38" id="Ht2-D5-eGU"/>
                             <constraint firstItem="XDd-uV-ojM" firstAttribute="top" secondItem="pbw-Hb-35N" secondAttribute="top" id="OzG-PC-6tT"/>
                             <constraint firstItem="Ijl-bc-mDl" firstAttribute="trailing" secondItem="E2W-SO-uH1" secondAttribute="trailing" constant="38" id="QeN-hK-0Qh"/>
                             <constraint firstItem="E2W-SO-uH1" firstAttribute="top" secondItem="mSu-8G-cls" secondAttribute="bottom" constant="8" id="Sgs-E7-xhT"/>
+                            <constraint firstItem="lZs-Kh-vPx" firstAttribute="centerY" secondItem="pbw-Hb-35N" secondAttribute="centerY" id="TJu-rg-HZJ"/>
                             <constraint firstItem="mSu-8G-cls" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" constant="38" id="W6C-dO-wyC"/>
                             <constraint firstItem="Ijl-bc-mDl" firstAttribute="trailing" secondItem="mSu-8G-cls" secondAttribute="trailing" constant="38" id="ZEu-8a-lif"/>
+                            <constraint firstItem="Ijl-bc-mDl" firstAttribute="trailing" secondItem="57I-c0-h0W" secondAttribute="trailing" constant="38" id="ZZb-bi-VhS"/>
                             <constraint firstItem="uPJ-nc-1Tt" firstAttribute="top" secondItem="XDd-uV-ojM" secondAttribute="bottom" constant="115" id="dMF-7M-jVM"/>
                             <constraint firstItem="E2W-SO-uH1" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" constant="38" id="k3i-ac-odK"/>
                             <constraint firstItem="uPJ-nc-1Tt" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" constant="92" id="mZn-0t-WJn"/>
-                            <constraint firstItem="E2W-SO-uH1" firstAttribute="bottom" secondItem="Ijl-bc-mDl" secondAttribute="bottom" id="ovn-xu-sy5"/>
+                            <constraint firstItem="57I-c0-h0W" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" constant="38" id="pSG-Rf-LcI"/>
                             <constraint firstItem="XDd-uV-ojM" firstAttribute="trailing" secondItem="pbw-Hb-35N" secondAttribute="trailing" id="pUd-fh-fWx"/>
                             <constraint firstItem="lZs-Kh-vPx" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" constant="38" id="s6o-VJ-5kb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraUnavailableLabel" destination="uPJ-nc-1Tt" id="xlw-29-JPB"/>
+                        <outlet property="categoryImage" destination="57I-c0-h0W" id="5PF-zf-XVH"/>
                         <outlet property="emotionLabel" destination="E2W-SO-uH1" id="v7w-3U-ghc"/>
                         <outlet property="previewView" destination="lZs-Kh-vPx" id="4Ms-eq-S68"/>
                         <outlet property="shutterButton" destination="mSu-8G-cls" id="OeM-BD-DoT"/>
