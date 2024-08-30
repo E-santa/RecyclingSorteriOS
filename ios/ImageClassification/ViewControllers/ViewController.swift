@@ -88,6 +88,12 @@ class ViewController: UIViewController {
 //        }
         if (UserDefaults().string(forKey: "jurisdiction") == "Sunnyvale") {
             self.model = .sunnyvale
+            if #available(iOS 14.0, *) {
+                let l = Logger()
+                l.log("You are in Sunnyvale")
+            } else {
+                // Fallback on earlier versions
+            }
         } else {
             self.model = .santaclara
         }
