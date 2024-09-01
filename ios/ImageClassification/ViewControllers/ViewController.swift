@@ -185,42 +185,14 @@ extension ViewController: CameraFeedManagerDelegate {
 
     inferenceQueue.async { [weak self] in
       guard let self = self else { return }
-//        if #available(iOS 14.0, *) {
-//            let logger = Logger()
-//            logger.info("makes it to inferenceland")
-//        } else {
-//            // Fallback on earlier versions
-//        }
 
       self.isInferenceQueueBusy = true
         self.shouldRun = false
         self.pixelBuffer = pixelBuffer
         let result = self.imageClassificationHelper?.classify(frame: self.pixelBuffer!)
-
-        // Display results by handing off to the InferenceViewController.
-  //      DispatchQueue.main.async {
-  //        let resolution = CGSize(
-  //          width: CVPixelBufferGetWidth(pixelBuffer), height: CVPixelBufferGetHeight(pixelBuffer))
-  //      }
-          let detectedEmotionRaw = displayStringsForResults(row: 1, inferenceResult: result)
+          let detectedEmotionRaw = displayStringsForResults(row: 0, inferenceResult: result)
           if (result != nil) {
               self.detectedEmotion = detectedEmotionRaw.0
-          }
-        if #available(iOS 14.0, *) {
-            let logger = Logger()
-            logger.info("emotion: \(self.detectedEmotion)")
-        } else {
-            // Fallback on earlier versions
-        }
-        if #available(iOS 14.0, *) {
-            let logger = Logger()
-            let juris = UserDefaults().string(forKey: "jurisdiction")!
-            logger.info("\(juris)")
-        } else {
-            // Fallback on earlier versions
-        }
-        self.isInferenceQueueBusy = false
-    }
               DispatchQueue.main.sync {
                   let utterance = AVSpeechUtterance(string: self.detectedEmotion)
                   utterance.voice = self.voice
@@ -228,8 +200,18 @@ extension ViewController: CameraFeedManagerDelegate {
                   if (self.detectedEmotion != "No Results") {
                       self.categoryImage.image = UIImage(named: "CategoryImages/\(self.detectedEmotion).png")
                   }
-                  synthesizer.speak(utterance)
+                  self.synthesizer.speak(utterance)
+              
+                }
+              if #available(iOS 14.0, *) {
+                  let logger = Logger()
+                  logger.info("emotion: \(self.detectedEmotion)")
+                  }
+              } else {
+                  // Fallback on earlier versions
               }
+        self.isInferenceQueueBusy = false
+    }
   }
 
   // MARK: Session Handling Alerts
@@ -319,6 +301,12 @@ enum ModelType: CaseIterable {
 func displayStringsForResults(row: Int, inferenceResult: ImageClassificationResult?) -> (fieldName: String, info: String) {
   var fieldName: String = ""
   var info: String = ""
+    if #available(iOS 14.0, *) {
+        let l = Logger()
+        l.log("\((inferenceResult!).classifications.categories.count)")
+    } else {
+        // Fallback on earlier versions
+    }
 
   guard let tempResult = inferenceResult, tempResult.classifications.categories.count > 0 else {
 
@@ -331,6 +319,12 @@ func displayStringsForResults(row: Int, inferenceResult: ImageClassificationResu
     }
     return (fieldName, info)
   }
+    if #available(iOS 14.0, *) {
+        let l = Logger()
+        l.log("\(tempResult.classifications.categories[0].label!)")
+    } else {
+        // Fallback on earlier versions
+    }
 
   if row < tempResult.classifications.categories.count {
     let category = tempResult.classifications.categories[row]
