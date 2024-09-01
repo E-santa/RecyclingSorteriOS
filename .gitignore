@@ -1,4 +1,3 @@
 
-ios/ImageClassification/CategoryImages/containers.png
-ios/ImageClassification/CategoryImages/No Results.png
-ios/ImageClassification/CategoryImages/trash.png
+*.png
+ios/ImageClassification/TFLite/santaclara-final.tflite

@@ -14,13 +14,13 @@
 		AAE79E952135237A00E7AC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E942135237A00E7AC1F /* ViewController.swift */; };
 		AAE79E9A2135268800E7AC1F /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E982135268800E7AC1F /* PreviewView.swift */; };
 		AAE79E9B2135268800E7AC1F /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E992135268800E7AC1F /* CameraFeedManager.swift */; };
+		AF1A1F932C83EBF800D93ACE /* organics.png in Resources */ = {isa = PBXBuildFile; fileRef = AF1A1F902C83EBF700D93ACE /* organics.png */; };
+		AF1A1F942C83EBF800D93ACE /* containers.png in Resources */ = {isa = PBXBuildFile; fileRef = AF1A1F912C83EBF800D93ACE /* containers.png */; };
+		AF1A1F962C83EC0A00D93ACE /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = AF1A1F952C83EC0A00D93ACE /* trash.png */; };
+		AF1A1F982C83EC1600D93ACE /* paper.png in Resources */ = {isa = PBXBuildFile; fileRef = AF1A1F972C83EC1600D93ACE /* paper.png */; };
 		AF3F74DD2C22205100E620AA /* tflite-quantizer.py in Resources */ = {isa = PBXBuildFile; fileRef = AF3F74DC2C22205100E620AA /* tflite-quantizer.py */; };
 		AF3F74DF2C2220BA00E620AA /* best-model.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF3F74DE2C2220BA00E620AA /* best-model.txt */; };
-		AF3F74E12C22222500E620AA /* metadataed.tflite in Resources */ = {isa = PBXBuildFile; fileRef = AF3F74E02C22222500E620AA /* metadataed.tflite */; };
 		AFAD188F2C7EE2BA00C23A6F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD188E2C7EE2BA00C23A6F /* SettingsViewController.swift */; };
-		AFBE13F72C818BFC00DD8329 /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBE13F42C818BFC00DD8329 /* trash.png */; };
-		AFBE13F82C818BFC00DD8329 /* No Results.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBE13F52C818BFC00DD8329 /* No Results.png */; };
-		AFBE13F92C818BFC00DD8329 /* containers.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBE13F62C818BFC00DD8329 /* containers.png */; };
 		AFE08FB42C6D375B0036BDB5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFE08FB32C6D375B0036BDB5 /* Settings.bundle */; };
 		BF43FFC12846FEC000D8FB74 /* ImageClassificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF43FFC02846FEC000D8FB74 /* ImageClassificationHelper.swift */; };
 		D4FE4CAF6557525B86F96D09 /* Pods_ImageClassification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33A00637C3AB63597629358 /* Pods_ImageClassification.framework */; };
@@ -50,13 +50,15 @@
 		AAE79E942135237A00E7AC1F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AAE79E982135268800E7AC1F /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		AAE79E992135268800E7AC1F /* CameraFeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
+		AF1A1F8C2C83D9C600D93ACE /* santaclara-final.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "santaclara-final.tflite"; sourceTree = "<group>"; };
+		AF1A1F8E2C83DDC200D93ACE /* sunnyvale-final.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sunnyvale-final.tflite"; sourceTree = "<group>"; };
+		AF1A1F902C83EBF700D93ACE /* organics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = organics.png; sourceTree = "<group>"; };
+		AF1A1F912C83EBF800D93ACE /* containers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = containers.png; sourceTree = "<group>"; };
+		AF1A1F952C83EC0A00D93ACE /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash.png; sourceTree = "<group>"; };
+		AF1A1F972C83EC1600D93ACE /* paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper.png; sourceTree = "<group>"; };
 		AF3F74DC2C22205100E620AA /* tflite-quantizer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "tflite-quantizer.py"; sourceTree = "<group>"; };
 		AF3F74DE2C2220BA00E620AA /* best-model.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "best-model.txt"; sourceTree = "<group>"; };
-		AF3F74E02C22222500E620AA /* metadataed.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = metadataed.tflite; sourceTree = "<group>"; };
 		AFAD188E2C7EE2BA00C23A6F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		AFBE13F42C818BFC00DD8329 /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash.png; sourceTree = "<group>"; };
-		AFBE13F52C818BFC00DD8329 /* No Results.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "No Results.png"; sourceTree = "<group>"; };
-		AFBE13F62C818BFC00DD8329 /* containers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = containers.png; sourceTree = "<group>"; };
 		AFE08FB32C6D375B0036BDB5 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BF43FFC02846FEC000D8FB74 /* ImageClassificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationHelper.swift; sourceTree = "<group>"; };
 		C33A00637C3AB63597629358 /* Pods_ImageClassification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageClassification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,8 +89,9 @@
 		AA5FEB7A21355CCC00F9BD4B /* TFLite */ = {
 			isa = PBXGroup;
 			children = (
-				AF3F74E02C22222500E620AA /* metadataed.tflite */,
+				AF1A1F8E2C83DDC200D93ACE /* sunnyvale-final.tflite */,
 				AF3F74DE2C2220BA00E620AA /* best-model.txt */,
+				AF1A1F8C2C83D9C600D93ACE /* santaclara-final.tflite */,
 				AF3F74DC2C22205100E620AA /* tflite-quantizer.py */,
 				BF43FFC02846FEC000D8FB74 /* ImageClassificationHelper.swift */,
 			);
@@ -159,9 +162,10 @@
 		AFBE13ED2C818B8F00DD8329 /* CategoryImages */ = {
 			isa = PBXGroup;
 			children = (
-				AFBE13F62C818BFC00DD8329 /* containers.png */,
-				AFBE13F52C818BFC00DD8329 /* No Results.png */,
-				AFBE13F42C818BFC00DD8329 /* trash.png */,
+				AF1A1F912C83EBF800D93ACE /* containers.png */,
+				AF1A1F952C83EC0A00D93ACE /* trash.png */,
+				AF1A1F972C83EC1600D93ACE /* paper.png */,
+				AF1A1F902C83EBF700D93ACE /* organics.png */,
 			);
 			path = CategoryImages;
 			sourceTree = "<group>";
@@ -239,15 +243,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3F74DF2C2220BA00E620AA /* best-model.txt in Resources */,
-				AFBE13F92C818BFC00DD8329 /* containers.png in Resources */,
-				AF3F74E12C22222500E620AA /* metadataed.tflite in Resources */,
 				AAE79E64213521DB00E7AC1F /* LaunchScreen.storyboard in Resources */,
 				AAE79E61213521DB00E7AC1F /* Assets.xcassets in Resources */,
 				AF3F74DD2C22205100E620AA /* tflite-quantizer.py in Resources */,
-				AFBE13F82C818BFC00DD8329 /* No Results.png in Resources */,
+				AF1A1F932C83EBF800D93ACE /* organics.png in Resources */,
 				AAE79E5F213521DA00E7AC1F /* Main.storyboard in Resources */,
-				AFBE13F72C818BFC00DD8329 /* trash.png in Resources */,
+				AF1A1F982C83EC1600D93ACE /* paper.png in Resources */,
+				AF1A1F942C83EBF800D93ACE /* containers.png in Resources */,
 				AFE08FB42C6D375B0036BDB5 /* Settings.bundle in Resources */,
+				AF1A1F962C83EC0A00D93ACE /* trash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

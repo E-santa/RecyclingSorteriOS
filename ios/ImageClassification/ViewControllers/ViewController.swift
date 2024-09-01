@@ -300,9 +300,9 @@ enum ModelType: CaseIterable {
   var modelFileInfo: FileInfo {
     switch self {
     case .sunnyvale:
-      return FileInfo("metadataed", "tflite")
+      return FileInfo("sunnyvale-final", "tflite")
         case .santaclara:
-            return FileInfo("metadataed", "tflite")
+            return FileInfo("santaclara-final", "tflite")
     }
   }
 
