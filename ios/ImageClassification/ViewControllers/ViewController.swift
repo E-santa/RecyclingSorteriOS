@@ -196,9 +196,13 @@ extension ViewController: CameraFeedManagerDelegate {
               DispatchQueue.main.sync {
                   let utterance = AVSpeechUtterance(string: self.detectedEmotion)
                   utterance.voice = self.voice
+                  if (self.detectedEmotion == "") {
+                      self.detectedEmotion = "Try Again"
+                  }
                   self.emotionLabel.text = self.detectedEmotion
-                  if (self.detectedEmotion != "No Results") {
-                      self.categoryImage.image = UIImage(named: "CategoryImages/\(self.detectedEmotion).png")
+                  if (self.detectedEmotion != "Try Again") {
+                      let im = UIImage(named: "\(self.detectedEmotion)")
+                      self.categoryImage.image = im
                   }
                   self.synthesizer.speak(utterance)
               
@@ -311,7 +315,7 @@ func displayStringsForResults(row: Int, inferenceResult: ImageClassificationResu
   guard let tempResult = inferenceResult, tempResult.classifications.categories.count > 0 else {
 
     if row == 1 {
-      fieldName = "No Results"
+      fieldName = "Try Again"
       info = ""
     } else {
       fieldName = ""

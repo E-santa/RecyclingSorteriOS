@@ -104,7 +104,6 @@
                             <constraint firstItem="57I-c0-h0W" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" constant="38" id="pSG-Rf-LcI"/>
                             <constraint firstItem="XDd-uV-ojM" firstAttribute="trailing" secondItem="pbw-Hb-35N" secondAttribute="trailing" id="pUd-fh-fWx"/>
                             <constraint firstItem="lZs-Kh-vPx" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" constant="38" id="s6o-VJ-5kb"/>
-                            <constraint firstItem="57I-c0-h0W" firstAttribute="bottom" secondItem="Ijl-bc-mDl" secondAttribute="bottom" constant="8" id="uXt-50-sf4"/>
                         </constraints>
                     </view>
                     <connections>
