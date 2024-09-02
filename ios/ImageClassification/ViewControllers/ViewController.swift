@@ -208,11 +208,14 @@ extension ViewController: CameraFeedManagerDelegate {
                   }
                   let utterance = AVSpeechUtterance(string: spokenText)
                   utterance.voice = self.voice
-                  if (spokenText != "Try Again") {
+                  if (spokenText != "Try Again" && spokenText != "") {
+                      self.emotionLabel.text = ""
                       let im = UIImage(named: "\(self.detectedEmotion)")
                       self.categoryImage.image = im
+                      self.categoryImage.heightAnchor.constraint(equalTo: self.categoryImage.widthAnchor, multiplier: im!.size.height / im!.size.width).isActive = true
                   } else {
                       self.emotionLabel.text = self.detectedEmotion
+                      self.categoryImage.image = nil
                   }
                   self.synthesizer.speak(utterance)
               
