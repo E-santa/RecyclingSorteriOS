@@ -194,15 +194,25 @@ extension ViewController: CameraFeedManagerDelegate {
           if (result != nil) {
               self.detectedEmotion = detectedEmotionRaw.0
               DispatchQueue.main.sync {
-                  let utterance = AVSpeechUtterance(string: self.detectedEmotion)
-                  utterance.voice = self.voice
-                  if (self.detectedEmotion == "") {
-                      self.detectedEmotion = "Try Again"
+                  var spokenText = ""
+                  if (self.detectedEmotion == "containers") {
+                      spokenText = "Container Recycling"
+                  } else if (self.detectedEmotion == "organics") {
+                      spokenText = "Organic Waste"
+                  } else if (self.detectedEmotion == "paper") {
+                      spokenText = "Paper Recycling"
+                  } else if (self.detectedEmotion == "trash") {
+                      spokenText = "Landfill Trash"
+                  } else if (self.detectedEmotion == "" || self.detectedEmotion == "Try Again") {
+                      spokenText = "Try Again"
                   }
-                  self.emotionLabel.text = self.detectedEmotion
-                  if (self.detectedEmotion != "Try Again") {
+                  let utterance = AVSpeechUtterance(string: spokenText)
+                  utterance.voice = self.voice
+                  if (spokenText != "Try Again") {
                       let im = UIImage(named: "\(self.detectedEmotion)")
                       self.categoryImage.image = im
+                  } else {
+                      self.emotionLabel.text = self.detectedEmotion
                   }
                   self.synthesizer.speak(utterance)
               
