@@ -42,6 +42,15 @@ class SettingsViewController: UIViewController {
             // Fallback on earlier versions
         }
     }
+    
+    @IBAction func goToPrivacy(_ sender: UIButton) {
+            self.performSegue(withIdentifier: "toPrivacy", sender: self)
+        }
+    
+    @IBAction func unwindFromPrivacy(_ sender: UIStoryboardSegue)
+        {
+        }
+
 
     /*
     // MARK: - Navigation

@@ -123,6 +123,7 @@ class ViewController: UIViewController {
         
     }
     
+        
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -281,6 +282,7 @@ extension ViewController: CameraFeedManagerDelegate {
     previewView.shouldUseClipboardImage = true
   }
 }
+
 
 
 // Define default constants
