@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDd-uV-ojM" userLabel="topBar">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="98.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="98"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recycling S♻️rter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLr-jm-DbR">
                                                 <rect key="frame" x="22" y="57" width="176" height="29"/>
@@ -30,9 +30,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-yr-PNu" userLabel="settings">
-                                                <rect key="frame" x="276" y="53" width="87" height="37.333333333333343"/>
+                                                <rect key="frame" x="268" y="53" width="95" height="37"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="87" id="xqW-hn-PL1"/>
+                                                    <constraint firstAttribute="width" constant="95" id="xqW-hn-PL1"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Settings">
@@ -56,7 +56,7 @@
                                         </constraints>
                                     </view>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Camera Unavailable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPJ-nc-1Tt">
-                                        <rect key="frame" x="92" y="413.66666666666669" width="191" height="26"/>
+                                        <rect key="frame" x="92" y="413.33333333333331" width="191" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -85,7 +85,7 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-Kh-vPx" customClass="PreviewView" customModule="ImageClassification" customModuleProvider="target">
-                                        <rect key="frame" x="45" y="106.33333333333331" width="300" height="640.33333333333348"/>
+                                        <rect key="frame" x="45" y="106" width="300" height="640.66666666666663"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>

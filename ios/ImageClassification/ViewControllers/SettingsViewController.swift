@@ -41,6 +41,24 @@ class SettingsViewController: UIViewController {
         } else {
             // Fallback on earlier versions
         }
+        let alert = UIAlertController(title: "Jurisdiction Set", message: "Successfully set jurisdiction to \(self.jurisdictions[pickedValue])", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style {
+                case .default:
+                print("default")
+                
+                case .cancel:
+                print("cancel")
+                
+                case .destructive:
+                print("destructive")
+                
+                @unknown default:
+                print("default")
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+
     }
     
     @IBAction func goToPrivacy(_ sender: UIButton) {

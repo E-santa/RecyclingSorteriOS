@@ -14,7 +14,7 @@ class PrivacyViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     let privacyText =
     """
-    <div style="font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="font-family: 'Avenir Next', BlinkMacSystemFont, sans-serif;">
     <h2>Advertisements</h2>
     <p>No advertisements are displayed to any users.</p>
 
