@@ -15,26 +15,30 @@ class PrivacyViewController: UIViewController {
     let privacyText =
     """
     <div style="font-family: 'Avenir Next', BlinkMacSystemFont, sans-serif;">
-    <h2>Advertisements</h2>
-    <p>No advertisements are displayed to any users.</p>
+        <h1> PRIVACY POLICY </h1>
+    <p> By Sanatan Mishra </p>
+        <ol>
+        <li><h3>Advertisements</h3>
+        <p>No advertisements are displayed to any users.</p></li>
 
-    <h2>Data Collection</h2>
-    <p>We collect zero user data whatsoever. All calculations and analyses are done locally on the device running the application. No user data is even relayed back to our backend because there is no backend.</p>
+        <li><h3>Data Collection</h3>
+        <p>We collect zero user data except the user's recycling jurisdiction, which is stored locally on the device and not shared with anyone. All calculations and analyses are done locally on the device running the application. No user data is even relayed back to our backend because there is no backend.</p>
 
-    <p>User waste is accessed through the camera in real time only while the app is being used, and this data is not stored anywhere.</p>
+        <p>User waste is accessed through the camera in real time only while the app is being used, and this data is not stored anywhere.</p></li>
 
-    <h2>Social</h2>
-    <p>There is no social aspect to this application and no user data is shared with any other users.</p>
+        <li><h3>Social</h3>
+        <p>There is no social aspect to this application and no user data is shared with any other users.</p></li>
 
-    <h2>APIs and SDKs</h2>
-    <p>No APIs or SDKs that collect any user data or otherwise have any type of age screen are used in this application.</p>
+        <li><h3>APIs and SDKs</h3>
+        <p>No APIs or SDKs that collect any user data or otherwise have any type of age screen are used in this application.</p></li>
 
-    <h2>Content</h2>
-    <p>All content is appropriate for ages 12 and up.</p>
+        <li><h3>Content</h3>
+        <p>All content is appropriate for ages 12 and up.</p></li>
+        </ol>
 
-    <h2>Inquiries</h2>
-    <p>Contact Sanatan Mishra at <a href="mailto:santarad280@gmail.com">santarad280@gmail.com</a> to submit inquiries.</p>
-    </div>
+        <h2>Inquiries</h2>
+        <p>Contact Sanatan Mishra at <a href="mailto:santarad280@gmail.com">santarad280@gmail.com</a> to submit inquiries.</p>
+        </div>
     """
 
     override func viewDidLoad() {

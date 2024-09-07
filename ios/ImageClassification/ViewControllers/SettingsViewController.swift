@@ -41,7 +41,7 @@ class SettingsViewController: UIViewController {
         } else {
             // Fallback on earlier versions
         }
-        let alert = UIAlertController(title: "Jurisdiction Set", message: "Successfully set jurisdiction to \(self.jurisdictions[pickedValue])", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Recycling Jurisdiction Set", message: "Successfully set recycling jurisdiction to \(self.jurisdictions[pickedValue])", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style {
                 case .default:
