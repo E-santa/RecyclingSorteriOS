@@ -117,6 +117,31 @@ class ViewController: UIViewController {
       if (UserDefaults().string(forKey: "jurisdiction") == nil) {
           UserDefaults().set(_: "Sunnyvale", forKey: "jurisdiction")
       }
+      self.detectedEmotion = "trash"
+      var spokenText = ""
+      if (self.detectedEmotion == "containers") {
+          spokenText = "Container Recycling"
+      } else if (self.detectedEmotion == "organics") {
+          spokenText = "Organic Waste"
+      } else if (self.detectedEmotion == "paper") {
+          spokenText = "Paper Recycling"
+      } else if (self.detectedEmotion == "trash") {
+          spokenText = "Landfill Trash"
+      } else if (self.detectedEmotion == "" || self.detectedEmotion == "Try Again") {
+          spokenText = "Try Again"
+      }
+      let utterance = AVSpeechUtterance(string: spokenText)
+      utterance.voice = self.voice
+      if (spokenText != "Try Again" && spokenText != "") {
+          self.emotionLabel.text = ""
+          let im = UIImage(named: "\(self.detectedEmotion)")
+          self.categoryImage.image = im
+          self.categoryImage.heightAnchor.constraint(equalTo: self.categoryImage.widthAnchor, multiplier: im!.size.height / im!.size.width).isActive = true
+      } else {
+          self.emotionLabel.text = self.detectedEmotion
+          self.categoryImage.image = nil
+      }
+      self.synthesizer.speak(utterance)
   }
     
     @IBAction func unwindToHome(_ sender: UIStoryboardSegue) {
@@ -193,7 +218,6 @@ extension ViewController: CameraFeedManagerDelegate {
         let result = self.imageClassificationHelper?.classify(frame: self.pixelBuffer!)
           let detectedEmotionRaw = displayStringsForResults(row: 0, inferenceResult: result)
           if (result != nil) {
-              self.detectedEmotion = detectedEmotionRaw.0
               DispatchQueue.main.sync {
                   var spokenText = ""
                   if (self.detectedEmotion == "containers") {
