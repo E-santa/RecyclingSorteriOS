@@ -3,10 +3,10 @@ from tflite_support.metadata_writers import writer_utils
 
 
 ImageClassifierWriter = image_classifier.MetadataWriter
-_MODEL_PATH = "/Users/santa/Documents/GitHub/RecyclingSorteriOS/RecyclingSorteriOS/ios/ImageClassification/TFLite/sunnyvale.tflite"
+_MODEL_PATH = "/Users/santa/Documents/GitHub/RecyclingSorteriOS/RecyclingSorteriOS/ios/ImageClassification/TFLite/santaclara.tflite"
 # Task Library expects label files that are in the same format as the one below.
 _LABEL_FILE = "/Users/santa/Documents/GitHub/RecyclingSorteriOS/RecyclingSorteriOS/ios/ImageClassification/TFLite/best-model.txt"
-_SAVE_TO_PATH = "/Users/santa/Desktop/sunnyvale-final.tflite"
+_SAVE_TO_PATH = "/Users/santa/Desktop/santaclara-final.tflite"
 # Normalization parameters is required when reprocessing the image. It is
 # optional if the image pixel values are in range of [0, 255] and the input
 # tensor is quantized to uint8. See the introduction for normalization and
