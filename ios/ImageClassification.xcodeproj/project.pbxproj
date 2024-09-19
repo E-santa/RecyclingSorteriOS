@@ -14,8 +14,8 @@
 		AAE79E952135237A00E7AC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E942135237A00E7AC1F /* ViewController.swift */; };
 		AAE79E9A2135268800E7AC1F /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E982135268800E7AC1F /* PreviewView.swift */; };
 		AAE79E9B2135268800E7AC1F /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E992135268800E7AC1F /* CameraFeedManager.swift */; };
-		AF3124542C9BE76B00FE0D67 /* santaclara-final.tflite in Resources */ = {isa = PBXBuildFile; fileRef = AF3124532C9BE76B00FE0D67 /* santaclara-final.tflite */; };
-		AF3124552C9BE8D500FE0D67 /* sunnyvale-final.tflite in Resources */ = {isa = PBXBuildFile; fileRef = AF31244D2C9BE62E00FE0D67 /* sunnyvale-final.tflite */; };
+		AF1A1F992C83FEBE00D93ACE /* sunnyvale-final.tflite in Resources */ = {isa = PBXBuildFile; fileRef = AF1A1F8E2C83DDC200D93ACE /* sunnyvale-final.tflite */; };
+		AF1A1F9A2C83FEBE00D93ACE /* santaclara-final.tflite in Resources */ = {isa = PBXBuildFile; fileRef = AF1A1F8C2C83D9C600D93ACE /* santaclara-final.tflite */; };
 		AF3F74DD2C22205100E620AA /* tflite-quantizer.py in Resources */ = {isa = PBXBuildFile; fileRef = AF3F74DC2C22205100E620AA /* tflite-quantizer.py */; };
 		AF3F74DF2C2220BA00E620AA /* best-model.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF3F74DE2C2220BA00E620AA /* best-model.txt */; };
 		AFA8586F2C8438820075502E /* organics.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA8586B2C8438810075502E /* organics.png */; };
@@ -53,8 +53,8 @@
 		AAE79E942135237A00E7AC1F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AAE79E982135268800E7AC1F /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		AAE79E992135268800E7AC1F /* CameraFeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
-		AF31244D2C9BE62E00FE0D67 /* sunnyvale-final.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sunnyvale-final.tflite"; sourceTree = "<group>"; };
-		AF3124532C9BE76B00FE0D67 /* santaclara-final.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "santaclara-final.tflite"; sourceTree = "<group>"; };
+		AF1A1F8C2C83D9C600D93ACE /* santaclara-final.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "santaclara-final.tflite"; sourceTree = "<group>"; };
+		AF1A1F8E2C83DDC200D93ACE /* sunnyvale-final.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sunnyvale-final.tflite"; sourceTree = "<group>"; };
 		AF3F74DC2C22205100E620AA /* tflite-quantizer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "tflite-quantizer.py"; sourceTree = "<group>"; };
 		AF3F74DE2C2220BA00E620AA /* best-model.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "best-model.txt"; sourceTree = "<group>"; };
 		AFA8586B2C8438810075502E /* organics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = organics.png; sourceTree = "<group>"; };
@@ -93,9 +93,9 @@
 		AA5FEB7A21355CCC00F9BD4B /* TFLite */ = {
 			isa = PBXGroup;
 			children = (
-				AF3124532C9BE76B00FE0D67 /* santaclara-final.tflite */,
-				AF31244D2C9BE62E00FE0D67 /* sunnyvale-final.tflite */,
+				AF1A1F8E2C83DDC200D93ACE /* sunnyvale-final.tflite */,
 				AF3F74DE2C2220BA00E620AA /* best-model.txt */,
+				AF1A1F8C2C83D9C600D93ACE /* santaclara-final.tflite */,
 				AF3F74DC2C22205100E620AA /* tflite-quantizer.py */,
 				BF43FFC02846FEC000D8FB74 /* ImageClassificationHelper.swift */,
 			);
@@ -247,7 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF3124542C9BE76B00FE0D67 /* santaclara-final.tflite in Resources */,
+				AF1A1F992C83FEBE00D93ACE /* sunnyvale-final.tflite in Resources */,
+				AF1A1F9A2C83FEBE00D93ACE /* santaclara-final.tflite in Resources */,
 				AFA858722C8438820075502E /* trash.png in Resources */,
 				AF3F74DF2C2220BA00E620AA /* best-model.txt in Resources */,
 				AFA858712C8438820075502E /* containers.png in Resources */,
@@ -255,7 +256,6 @@
 				AFA8586F2C8438820075502E /* organics.png in Resources */,
 				AAE79E61213521DB00E7AC1F /* Assets.xcassets in Resources */,
 				AFA858702C8438820075502E /* paper.png in Resources */,
-				AF3124552C9BE8D500FE0D67 /* sunnyvale-final.tflite in Resources */,
 				AF3F74DD2C22205100E620AA /* tflite-quantizer.py in Resources */,
 				AAE79E5F213521DA00E7AC1F /* Main.storyboard in Resources */,
 				AFE08FB42C6D375B0036BDB5 /* Settings.bundle in Resources */,
