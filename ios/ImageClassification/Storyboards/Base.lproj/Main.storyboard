@@ -56,14 +56,18 @@
                                         </constraints>
                                     </view>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Camera Unavailable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPJ-nc-1Tt">
-                                        <rect key="frame" x="92" y="405.33333333333331" width="191" height="26"/>
+                                        <rect key="frame" x="92" y="382.66666666666669" width="191" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSu-8G-cls" userLabel="shutterButton">
-                                        <rect key="frame" x="45" y="718" width="300" height="74"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSu-8G-cls" userLabel="shutterButton">
+                                        <rect key="frame" x="45" y="693" width="300" height="99"/>
                                         <accessibility key="accessibilityConfiguration" label="shutterButton"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="0Ck-Up-TeR"/>
+                                            <constraint firstAttribute="height" constant="99" id="xAH-IU-GVg"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="CLICK ME!" buttonSize="large">
                                             <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
@@ -84,8 +88,8 @@
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="10" id="rnA-PC-wwH"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-Kh-vPx" customClass="PreviewView" customModule="ImageClassification" customModuleProvider="target">
-                                        <rect key="frame" x="45" y="106" width="300" height="604"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-Kh-vPx" customClass="PreviewView" customModule="ImageClassification" customModuleProvider="target">
+                                        <rect key="frame" x="45" y="106" width="300" height="579"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -117,8 +121,8 @@
                         <viewLayoutGuide key="safeArea" id="Ijl-bc-mDl"/>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.92941176469999998" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TMT-gp-YYR" firstAttribute="leading" secondItem="Ijl-bc-mDl" secondAttribute="leading" id="8a5-j4-MYX"/>
-                            <constraint firstItem="TMT-gp-YYR" firstAttribute="trailing" secondItem="Ijl-bc-mDl" secondAttribute="trailing" id="j5J-la-R92"/>
+                            <constraint firstItem="TMT-gp-YYR" firstAttribute="leading" secondItem="pbw-Hb-35N" secondAttribute="leading" id="8a5-j4-MYX"/>
+                            <constraint firstItem="TMT-gp-YYR" firstAttribute="trailing" secondItem="pbw-Hb-35N" secondAttribute="trailing" id="j5J-la-R92"/>
                             <constraint firstAttribute="bottom" secondItem="TMT-gp-YYR" secondAttribute="bottom" id="kmp-JY-CFm"/>
                             <constraint firstItem="TMT-gp-YYR" firstAttribute="top" secondItem="pbw-Hb-35N" secondAttribute="top" id="wu5-NH-bzS"/>
                         </constraints>
@@ -182,7 +186,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqK-DF-uzB" userLabel="backButton">
-                                <rect key="frame" x="38" y="464.33333333333331" width="314" height="37.333333333333314"/>
+                                <rect key="frame" x="38" y="464.66666666666669" width="314" height="37"/>
                                 <accessibility key="accessibilityConfiguration" label="shutterButton"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="BACK" buttonSize="medium">
@@ -200,7 +204,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8c-9e-amT" userLabel="confirmButton">
-                                <rect key="frame" x="38" y="395" width="314" height="37.333333333333314"/>
+                                <rect key="frame" x="38" y="395" width="314" height="37.666666666666686"/>
                                 <accessibility key="accessibilityConfiguration" label="shutterButton"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CONFIRM CHANGES" buttonSize="medium">
