@@ -56,7 +56,7 @@
                                         </constraints>
                                     </view>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Camera Unavailable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPJ-nc-1Tt">
-                                        <rect key="frame" x="92" y="413.33333333333331" width="191" height="26"/>
+                                        <rect key="frame" x="92" y="405.33333333333331" width="191" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                                         <rect key="frame" x="45" y="718" width="300" height="74"/>
                                         <accessibility key="accessibilityConfiguration" label="shutterButton"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="CLICK ME!" buttonSize="medium">
+                                        <buttonConfiguration key="configuration" style="filled" title="CLICK ME!" buttonSize="large">
                                             <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                         </buttonConfiguration>
                                     </button>
