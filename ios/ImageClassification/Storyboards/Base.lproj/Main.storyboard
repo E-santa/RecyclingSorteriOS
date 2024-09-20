@@ -61,8 +61,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSu-8G-cls" userLabel="shutterButton">
-                                        <rect key="frame" x="45" y="754.66666666666663" width="300" height="37.333333333333371"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSu-8G-cls" userLabel="shutterButton">
+                                        <rect key="frame" x="45" y="718" width="300" height="74"/>
                                         <accessibility key="accessibilityConfiguration" label="shutterButton"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="CLICK ME!" buttonSize="medium">
@@ -84,8 +84,8 @@
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="10" id="rnA-PC-wwH"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-Kh-vPx" customClass="PreviewView" customModule="ImageClassification" customModuleProvider="target">
-                                        <rect key="frame" x="45" y="106" width="300" height="640.66666666666663"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-Kh-vPx" customClass="PreviewView" customModule="ImageClassification" customModuleProvider="target">
+                                        <rect key="frame" x="45" y="106" width="300" height="604"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>

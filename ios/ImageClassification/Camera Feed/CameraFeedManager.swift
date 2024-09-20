@@ -77,32 +77,7 @@ class CameraFeedManager: NSObject {
   weak var delegate: CameraFeedManagerDelegate?
     
     func updateOrientation() {
-        let orientation = UIDevice.current.orientation
-        if orientation == .unknown {
-            if #available(iOS 13.0, *) {
-                if let orientation_2 = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.windowScene?.interfaceOrientation {
-                    if orientation_2 == .portrait {
-                        self.previewView.previewLayer.connection?.videoOrientation = .portrait
-                    } else if orientation_2 == .landscapeLeft {
-                        self.previewView.previewLayer.connection?.videoOrientation = .landscapeRight
-                    } else if orientation_2 == .landscapeRight {
-                        self.previewView.previewLayer.connection?.videoOrientation = .landscapeLeft
-                    } else if orientation_2 == .portraitUpsideDown {
-                        self.previewView.previewLayer.connection?.videoOrientation = .portraitUpsideDown
-                    }
-                }
-            } else {
-                self.previewView.previewLayer.connection?.videoOrientation = .landscapeLeft
-            }
-        } else if orientation == .portrait {
-            self.previewView.previewLayer.connection?.videoOrientation = .portrait
-        } else if orientation == .landscapeLeft {
-            self.previewView.previewLayer.connection?.videoOrientation = .landscapeRight
-        } else if orientation == .landscapeRight {
-            self.previewView.previewLayer.connection?.videoOrientation = .landscapeLeft
-        } else if orientation == .portraitUpsideDown {
-            self.previewView.previewLayer.connection?.videoOrientation = .portraitUpsideDown
-        }
+        self.previewView.previewLayer.connection?.videoOrientation = .portrait
     }
 
   // MARK: Initializer
