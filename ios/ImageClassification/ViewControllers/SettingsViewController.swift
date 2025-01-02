@@ -3,7 +3,7 @@
 //  ImageClassification
 //
 //  Created by Sanatan on 8/27/24.
-//  Copyright © 2024 Y Media Labs. All rights reserved.
+//  Copyright © 2024 Sanatan Mishra. All rights reserved.
 //
 
 import OSLog
