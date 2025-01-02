@@ -16,7 +16,7 @@ class ViewController: UIViewController {
   // MARK: Storyboards Connections
   @IBOutlet weak var previewView: PreviewView!
   @IBOutlet weak var cameraUnavailableLabel: UILabel!
-  @IBOutlet weak var emotionLabel: UILabel!
+  @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var shutterButton: UIButton!
     @IBOutlet weak var settings: UIButton!
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
   }
   private var scoreThreshold = DefaultConstants.scoreThreshold
   private var model: ModelType = .sunnyvale
-  private var detectedEmotion = ""
+  private var detectedCategory = ""
     private var pixelBuffer: CVPixelBuffer? = nil
     private var shouldRun = false
 
@@ -185,31 +185,31 @@ extension ViewController: CameraFeedManagerDelegate {
         self.shouldRun = false
         self.pixelBuffer = pixelBuffer
         let result = self.imageClassificationHelper?.classify(frame: self.pixelBuffer!)
-          let detectedEmotionRaw = displayStringsForResults(row: 0, inferenceResult: result)
+          let detectedCategoryRaw = displayStringsForResults(row: 0, inferenceResult: result)
           if (result != nil) {
-              self.detectedEmotion = detectedEmotionRaw.0
+              self.detectedCategory = detectedCategoryRaw.0
               DispatchQueue.main.sync {
                   var spokenText = ""
-                  if (self.detectedEmotion == "containers") {
+                  if (self.detectedCategory == "containers") {
                       spokenText = "Container Recycling"
-                  } else if (self.detectedEmotion == "organics") {
+                  } else if (self.detectedCategory == "organics") {
                       spokenText = "Organic Waste"
-                  } else if (self.detectedEmotion == "paper") {
+                  } else if (self.detectedCategory == "paper") {
                       spokenText = "Paper Recycling"
-                  } else if (self.detectedEmotion == "trash") {
+                  } else if (self.detectedCategory == "trash") {
                       spokenText = "Landfill Trash"
-                  } else if (self.detectedEmotion == "" || self.detectedEmotion == "Try Again") {
+                  } else if (self.detectedCategory == "" || self.detectedCategory == "Try Again") {
                       spokenText = "Try Again"
                   }
                   let utterance = AVSpeechUtterance(string: spokenText)
                   utterance.voice = self.voice
                   if (spokenText != "Try Again" && spokenText != "") {
-                      self.emotionLabel.text = ""
-                      let im = UIImage(named: "\(self.detectedEmotion)")
+                      self.categoryLabel.text = ""
+                      let im = UIImage(named: "\(self.detectedCategory)")
                       self.categoryImage.image = im
                       self.categoryImage.heightAnchor.constraint(equalTo: self.categoryImage.widthAnchor, multiplier: im!.size.height / im!.size.width).isActive = true
                   } else {
-                      self.emotionLabel.text = self.detectedEmotion
+                      self.categoryLabel.text = self.detectedCategory
                       self.categoryImage.image = nil
                   }
                   self.synthesizer.speak(utterance)
@@ -217,7 +217,7 @@ extension ViewController: CameraFeedManagerDelegate {
                 }
               if #available(iOS 14.0, *) {
                   let logger = Logger()
-                  logger.info("emotion: \(self.detectedEmotion)")
+                  logger.info("category: \(self.detectedCategory)")
                   }
               } else {
                   // Fallback on earlier versions
