@@ -11,3 +11,6 @@ Moreover, this app helps the elderly, vision-impaired, and general public sort r
 ## Technical Details
 **Libraries Used:** iOS SDK, TensorFlow Lite
 **Languages Used:** Swift, Python
+## Acknowledgements
+This app is based on the [TensorFlow Lite example iOS Image Classification app
+](https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/ios).
