@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  ImageClassification
 //
-//  Created by Sanatan on 6/18/24.
+//  Created by Sanatan on 6/18/24 based on files created by TensorFlow licensed under the Apache License and later expanded.
 //  Copyright © 2024 Sanatan Mishra. All rights reserved.
 //
 
